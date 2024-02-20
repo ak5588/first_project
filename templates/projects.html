@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}projects{% endblock %}
+
+{% block content %}
+<!-- <h2>Welcome to the Home Page</h2>
+    <p>This is the home page content.</p> -->
+
+<body>
+
+    <header>
+        <h1>Python Programming Projects</h1>
+        <p>Explore real-world projects to apply your Python skills.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#web-development">Web Development</a></li>
+            <li><a href="#data-science">Data Science</a></li>
+            <li><a href="#automation">Automation</a></li>
+            <li><a href="#machine-learning">Machine Learning</a></li>
+        </ul>
+    </nav>
+
+    <section id="web-development">
+        <h2>Web Development Projects</h2>
+        <div class="project">
+            <h3>Blog Website</h3>
+            <p>Create a blog website using Flask with features like user authentication and post management.</p>
+            <button>Explore Project</button>
+        </div>
+
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>Build a personal portfolio website showcasing your skills and projects using Flask or Django.</p>
+            <button>Explore Project</button>
+        </div>
+    </section>
+
+    <section id="data-science">
+        <h2>Data Science Projects</h2>
+        <div class="project">
+            <h3>Data Analysis with Pandas</h3>
+            <p>Conduct data analysis on a real dataset using Pandas and present your findings with Matplotlib.</p>
+            <button>Explore Project</button>
+        </div>
+
+        <div class="project">
+            <h3>Machine Learning Model</h3>
+            <p>Build and deploy a machine learning model using scikit-learn or TensorFlow for a specific task.</p>
+            <button>Explore Project</button>
+        </div>
+    </section>
+
+    <section id="automation">
+        <h2>Automation Projects</h2>
+        <div class="project">
+            <h3>Email Automation</h3>
+            <p>Create a Python script to automate sending emails for a specific purpose or event.</p>
+            <button>Explore Project</button>
+        </div>
+
+        <div class="project">
+            <h3>File Organizer</h3>
+            <p>Build a script to automatically organize files in a directory based on file types or other criteria.</p>
+            <button>Explore Project</button>
+        </div>
+    </section>
+
+    <section id="machine-learning">
+        <h2>Machine Learning Projects</h2>
+        <div class="project">
+            <h3>Image Classification</h3>
+            <p>Develop an image classification model using a deep learning framework like TensorFlow or PyTorch.</p>
+            <button>Explore Project</button>
+        </div>
+
+        <div class="project">
+            <h3>Natural Language Processing</h3>
+            <p>Build a natural language processing model for sentiment analysis or text classification.</p>
+            <button>Explore Project</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Learn Python Programming</p>
+    </footer>
+</body>
+{% endblock %}

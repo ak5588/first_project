@@ -1,0 +1,98 @@
+{% extends 'home.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<h2>Login</h2>
+
+<style>
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        color: #333;
+        box-sizing: border-box;
+    }
+
+    .Radio {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-right: 12%;
+    }
+
+    .separator {
+        margin: 15px 0;
+        border: none;
+        height: 1px;
+        background-color: #ccc;
+    }
+
+    .sign {
+        padding: 12px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+    .sign:hover {
+        background-color: #27702b;
+    }
+
+    .signup {
+        text-align: center;
+    }
+
+    .signup a {
+        color: #267ef1;
+    }
+</style>
+
+<form action="/login" method="post">
+    <div class="form-container1">
+        <p class="title1">Login</p>
+        <form class="form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="">
+            </div>
+            <div>
+                <div class="Radio">
+                    <span>Login As</span>
+                    <input checked="" value="radio1" type="radio" name="radio" id="Radio1" />
+                    <label for="Radio1">Student</label>
+
+                    <input value="radio2" type="radio" name="radio" id="Radio2" />
+                    <label for="Radio2">Educator</label>
+                </div>
+            </div>
+            {% if error %}
+            <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            <hr class="separator">
+            <button class="sign">Sign in</button>
+            <hr class="separator">
+        </form>
+        <p> </p>
+        <p class="signup">Don't have an account?
+            <a href="/register" class="">Sign up</a>
+        </p>
+    </div>
+</form>
+
+{% endblock %}

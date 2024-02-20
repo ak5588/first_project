@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      background-color: #070707;
+      color: #fff;
+      padding: 10px;
+      text-align: left;
+
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .container {
+      margin: 5px;
+      padding: 10px;
+      background-color: #c3cba9;
+    }
+
+    /* another style */
+    /* Reset some default styles */
+    body,
+    h1,
+    h2,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #070707;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+    }
+
+    nav ul {
+      list-style-type: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: #12ee1d;
+      text-decoration: none;
+    }
+
+    section {
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #070707;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+
+    /* login */
+    .form-container1 {
+      border-radius: 1.75rem;
+      background-color: rgba(17, 24, 39, 1);
+      padding: 2rem;
+      color: rgba(243, 244, 246, 1);
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 10%;
+      margin-bottom: 15%;
+    }
+
+    .form-container {
+      width: 320px;
+      /* border-radius: 0.75rem;
+      background-color: rgba(17, 24, 39, 1);
+      padding: 2rem;
+      color: rgba(243, 244, 246, 1); 
+       margin-left: 500px; */
+      position: fixed;
+      top: 39%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* padding: 20px;
+      background-color: white; */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 700;
+      color: #0a0a0b;
+    }
+
+    .title1 {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 700;
+      color: #ededf1;
+    }
+
+    .form {
+      margin-top: 1.5rem;
+    }
+
+    .input-group label {
+      display: block;
+      color: rgb(136, 24, 241);
+      margin-bottom: 4px;
+    }
+
+    .input-group input {
+      width: 100%;
+      border-radius: 1.375rem;
+      border: 1px solid rgb(87, 103, 129);
+      background-color: rgb(30, 35, 46);
+      padding: 0.75rem 1rem;
+      color: rgba(243, 244, 246, 1);
+    }
+
+
+    .signup a {
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+
+    .sign1 {
+
+      background-color: rgba(167, 139, 250, 1);
+      padding: 0.75rem;
+      margin-left: 45%;
+      text-align: center;
+      color: rgba(17, 24, 39, 1);
+      border: none;
+      border-radius: 0.375rem;
+      font-weight: 600;
+    }
+    
+
+
+
+    /* .line {
+  height: 1px;
+  flex: 1 1 0%;
+  background-color: rgba(55, 65, 81, 1);
+} */
+
+    .signup {
+      text-align: center;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      color: rgb(238, 238, 249);
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* width: 100%;
+      height: 100%;
+      background-color: rgba(175, 20, 20, 0.5); */
+    }
+
+    button {
+      background-color: transparent;
+      color: #12ee1d;
+      font-size: 17px;
+      border-width: 0cap;
+    }
+
+    #Radio1 {
+      accent-color: rgb(0, 255, 17);
+    }
+
+    #Radio2 {
+      accent-color: rgb(0, 255, 17);
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <!-- <button onclick="openLoginPopup()">Login</button> -->
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+    <a href="/compiler">Compiler</a>
+
+  </nav>
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+
+  <!-- <form action="/login" method="post">
+    <div class="form-container">
+        <div class="overlay" id="overlay">
+        <p class="title">Login</p>
+        <form class="form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="">
+            </div>
+            <p>---------------------------------------------------------</p>
+            <button class="sign">Sign in</button>
+            <p>---------------------------------------------------------</p>
+        </form>
+       <p>    </p>
+        <p class="signup">Don't have an account?
+            <a href="/register" class="">Sign up</a>
+        </p>
+    </div>
+    </div>
+</form>
+<script>
+    function openLoginPopup() {
+    document.getElementById('overlay').style.display = 'block';
+}
+</script> -->
+
+
+</body>
+
+</html>

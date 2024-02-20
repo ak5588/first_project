@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Home1{% endblock %}
+
+{% block content %}
+<!-- <h2>Welcome to the Home Page</h2>
+    <p>This is the home page content.</p> -->
+
+<body link='black' vlink='black'>
+
+    <header>
+        <h1>Learn Python Programming</h1>
+        <h3>For Educator</h3>
+        <nav>
+            <ul>
+                <li><a href="/tutorial">Tutorials</a></li>
+                <li><a href="/exercise">Exercises</a></li>
+                <li><a href="/project">Projects</a></li>
+                <li><a href="/resource1">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="tutorials">
+        <a href="/tutorial">
+            <h2>Tutorials</h2>
+        </a>
+        <p>Welcome to our Python programming tutorials section.</p>
+        <p>I am teacher</p>
+    </section>
+
+    <section id="exercises">
+        <a href="/exercise">
+            <h2>Exercises</h2>
+        </a>
+        <p>Practice your Python programming skills with these exercises.</p>
+        <!-- Add your exercise content here -->
+    </section>
+
+    <section id="projects">
+        <a href="/project">
+            <h2>Projects</h2>
+        </a>
+        <p>Build real-world projects to apply your Python programming knowledge.</p>
+        <!-- Add your project content here -->
+    </section>
+
+    <section id="resources">
+        <a href="/resource">
+            <h2>Resources</h2>
+        </a>
+        <p>Useful resources for learning Python programming.</p>
+        <!-- Add your resource content here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Learn Python Programming</p>
+    </footer>
+</body>
+{% endblock %}

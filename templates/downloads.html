@@ -1,0 +1,57 @@
+{% extends 'edit.html' %}
+
+{% block title %}Downloads{% endblock %}
+
+{% block content %}
+<style>
+    .contain {
+        margin: 18% 30% 20% 38%;
+        /* margin-top: 18%;
+        margin-bottom: 20%;
+        text-align: center; */
+        padding-bottom: 30%;
+        font-size: 2vw;
+
+    }
+
+    .contain1 {
+        /* padding-bottom: 30%; */
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    label {
+        font-weight: 600;
+    }
+
+    .inp {
+        background-color: blueviolet;
+    }
+
+    button {
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <nav>
+        <h1>File Upload and Download</h1>
+    </nav>
+
+    <form>
+        {% for filename in filenames %}
+        <div class="contain1">
+            <span>{{ filename }}</span>
+            <a href="{{ url_for('download_file', filename=filename) }}" download>
+                <button>Download</button>
+            </a>
+        </div>
+        </div>
+    </form>
+
+    {% endfor %}
+    <!-- <footer>
+        <p>&copy; 2024 Learn Python Programming</p>
+    </footer> -->
+</body>
+{% endblock %}

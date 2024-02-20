@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}exercises{% endblock %}
+
+{% block content %}
+<!-- <h2>Welcome to the Home Page</h2>
+    <p>This is the home page content.</p> -->
+
+<body>
+
+    <!-- <header>
+            <h1>Learn Python Programming</h1>
+            <nav>
+                <ul>
+                    <li><a href="/tutorial">Tutorials</a></li>
+                    <li><a href="/exercise">Exercises</a></li>
+                    <li><a href="/project">Projects</a></li>
+                    <li><a href="/resource">Resources</a></li>
+                </ul>
+            </nav>
+        </header>
+         -->
+    <header>
+        <h1>Python Programming Exercises</h1>
+        <p>Sharpen your Python skills with hands-on exercises.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#beginner">Beginner Exercises</a></li>
+            <li><a href="#intermediate">Intermediate Exercises</a></li>
+            <li><a href="#advanced">Advanced Exercises</a></li>
+        </ul>
+    </nav>
+
+    <section id="beginner">
+        <h2>Beginner Exercises</h2>
+        <div class="exercise">
+            <h3>Print "Hello, World!"</h3>
+            <p>Write a Python program to print the string "Hello, World!" to the console.</p>
+            <button>Solve Exercise</button>
+        </div>
+
+        <div class="exercise">
+            <h3>Add Two Numbers</h3>
+            <p>Write a program that takes two numbers as input and prints their sum.</p>
+            <button>Solve Exercise</button>
+        </div>
+    </section>
+
+    <section id="intermediate">
+        <h2>Intermediate Exercises</h2>
+        <div class="exercise">
+            <h3>Factorial Calculation</h3>
+            <p>Write a Python function to calculate the factorial of a given number.</p>
+            <button>Solve Exercise</button>
+        </div>
+
+        <div class="exercise">
+            <h3>Palindrome Checker</h3>
+            <p>Write a function to check if a given string is a palindrome.</p>
+            <button>Solve Exercise</button>
+        </div>
+    </section>
+
+    <section id="advanced">
+        <h2>Advanced Exercises</h2>
+        <div class="exercise">
+            <h3>Prime Number Generator</h3>
+            <p>Write a Python program to generate a list of prime numbers up to a given limit.</p>
+            <button>Solve Exercise</button>
+        </div>
+
+        <div class="exercise">
+            <h3>Web Scraping Challenge</h3>
+            <p>Use Python and BeautifulSoup to scrape information from a website.</p>
+            <button>Solve Exercise</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Learn Python Programming</p>
+    </footer>
+</body>
+{% endblock %}

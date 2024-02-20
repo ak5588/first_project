@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %}resources{% endblock %}
+
+{% block content %}
+<!-- <h2>Welcome to the Home Page</h2>
+    <p>This is the home page content.</p> -->
+
+<body link='green' vlink='green'>
+
+    <header>
+        <h1>Python Programming Resources</h1>
+        <p>Explore recommended resources to enhance your Python programming skills.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#courses">Online Courses</a></li>
+            <li><a href="#documentation">Documentation</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#communities">Communities</a></li>
+            <li><a href="/edit">Edit</a></li>
+        </ul>
+    </nav>
+
+    <section id="books">
+        <h2>Recommended Books</h2>
+        <div class="resource">
+            <h3>1. "Python Crash Course" by Eric Matthes</h3>
+            <p>A hands-on, project-based introduction to programming with Python.</p>
+            <a href="https://www.amazon.com/Python-Crash-Course-Eric-Matthes/dp/1593279280" target="_blank">View on
+                Amazon</a>
+        </div>
+
+        <div class="resource">
+            <h3>2. "Fluent Python" by Luciano Ramalho</h3>
+            <p>Deep dive into Python's features and idioms for writing clean, effective, and Pythonic code.</p>
+            <a href="https://www.oreilly.com/library/view/fluent-python/9781491946237/" target="_blank">View on
+                O'Reilly</a>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2>Colledge Notes</h2>
+        <div class="resource">
+            <h3>Download The notes from here</h3>
+            <span>{{ filename }}</span>
+            <a href="{{ url_for('download_file', filename=filename) }}" Download >Download</a>
+        </div>
+
+        <div class="resource">
+            <h3>2. edX: Introduction to Computer Science and Programming Using Python</h3>
+            <p>An MIT course covering Python programming and computer science fundamentals.</p>
+            <a href="https://www.edx.org/course/introduction-to-computer-science-and-programming-7"
+                target="_blank">Visit edX</a>
+        </div>
+    </section>
+
+    <section id="documentation">
+        <h2>Documentation</h2>
+        <div class="resource">
+            <h3>1. Python Official Documentation</h3>
+            <p>Comprehensive documentation covering the Python programming language and its standard libraries.</p>
+            <a href="https://docs.python.org/3/" target="_blank">Visit Documentation</a>
+        </div>
+
+        <div class="resource">
+            <h3>2. NumPy Documentation</h3>
+            <p>Documentation for NumPy, a fundamental package for scientific computing with Python.</p>
+            <a href="https://numpy.org/doc/stable/" target="_blank">Visit Documentation</a>
+        </div>
+    </section>
+
+    <section id="blogs">
+        <h2>Recommended Blogs</h2>
+        <div class="resource">
+            <h3>1. Real Python</h3>
+            <p>High-quality tutorials, articles, and other resources for Python developers of all skill levels.</p>
+            <a href="https://realpython.com/" target="_blank">Visit Real Python</a>
+        </div>
+
+        <div class="resource">
+            <h3>2. Towards Data Science</h3>
+            <p>Explore articles on data science, machine learning, and programming with Python on Medium.</p>
+            <a href="https://towardsdatascience.com/" target="_blank">Visit Towards Data Science</a>
+        </div>
+    </section>
+
+    <section id="communities">
+        <h2>Online Communities</h2>
+        <div class="resource">
+            <h3>1. Stack Overflow</h3>
+            <p>Ask and answer technical questions related to Python programming and connect with the developer
+                community.</p>
+            <a href="https://stackoverflow.com/" target="_blank">Visit Stack Overflow</a>
+        </div>
+
+        <div class="resource">
+            <h3>2. Reddit: r/learnpython</h3>
+            <p>Engage with fellow learners, share resources, and seek advice on learning Python.</p>
+            <a href="https://www.reddit.com/r/learnpython/" target="_blank">Visit Reddit</a>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Learn Python Programming</p>
+    </footer>
+</body>
+{% endblock %}

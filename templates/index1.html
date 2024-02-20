@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Python Programming</title>
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body> 
+
+    <header>
+        <h1>Learn Python Programming</h1>
+        <nav>
+            <ul>
+                <li><a href="#tutorials">Tutorials</a></li>
+                <li><a href="#exercises">Exercises</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="/editor">Editor</a></li>
+            </ul>
+        </nav>
+    </header>
+{{block content}}
+    <section id="tutorials">
+        <h2>Tutorials</h2>
+        <p>Welcome to our Python programming tutorials section.</p>
+        <!-- Add your tutorial content here -->
+    </section>
+
+    <section id="exercises">
+        <h2>Exercises</h2>
+        <p>Practice your Python programming skills with these exercises.</p>
+        <!-- Add your exercise content here -->
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Build real-world projects to apply your Python programming knowledge.</p>
+        <!-- Add your project content here -->
+    </section>
+
+    <section id="resources">
+        <h2>Resources</h2>
+        <p>Useful resources for learning Python programming.</p>
+        <!-- Add your resource content here -->
+    </section>
+{{endblock}}
+    <footer>
+        <p>&copy; 2024 Learn Python Programming</p>
+    </footer>
+</body>
+</html>

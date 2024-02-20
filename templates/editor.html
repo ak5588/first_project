@@ -1,0 +1,50 @@
+{{extends }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/mode/python/python.min.js"></script>
+    <script src="https://unpkg.com/skulpt@0.13.0/dist/skulpt.min.js"></script>
+    <script src="https://unpkg.com/skulpt-stdlib@0.13.0/dist/stdlib.js"></script>
+    <style>
+        .CodeMirror {
+            height: 300px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="code" name="code"></textarea>
+    <button onclick="runCode()">Run Code</button>
+    <div id="output"></div>
+
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+            mode: 'python',
+            lineNumbers: true,
+            theme: 'default'
+        });
+
+        function runCode() {
+            var code = editor.getValue();
+
+            Sk.configure({output: function (text) {
+                document.getElementById('output').textContent += text + '\n';
+            }});
+
+            Sk.misceval.asyncToPromise(function() {
+                return Sk.importMainWithBody("<stdin>", false, code, true);
+            }).then(function (mod) {
+                console.log('Code execution complete.');
+            }, function (err) {
+                console.error(err.toString());
+            });
+        }
+    </script>
+</body>
+</html>
